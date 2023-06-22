@@ -1,0 +1,276 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family: 'Noto Serif Thai', serif;
+}
+
+
+/* loader style */
+.loader{
+    width:100vw;
+    height:100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+   }
+   
+   circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+   }
+   
+   @keyframes rotate4 {
+    100% {
+     transform: rotate(360deg);
+    }
+   }
+   
+   @keyframes dash4 {
+    0% {
+     stroke-dasharray: 1, 200;
+     stroke-dashoffset: 0;
+    }
+   
+    50% {
+     stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+   
+    100% {
+     stroke-dashoffset: -125px;
+    }
+   }
+   
+   /* tag */
+   .tag{
+    background-color: #6c1212;
+    width: 100%;
+   }
+
+   .tag h2{
+    color: white;
+    padding: .6em;
+    font-size: .9rem;
+    text-align: center;
+    letter-spacing: .05em;
+   }
+
+   /* logo */
+   .logo{
+    width: 100%;
+
+   }
+   .logo img{
+    width: 100%;
+   }
+
+/* about */
+
+.about{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em 0;
+text-align: center;
+}
+.about h1{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #6c1212;
+}
+.about img{
+    width: 70%;
+}
+/* who */
+.who{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em 0;
+text-align: left;
+}
+.who h2{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #6c1212;
+}
+.who p{
+    padding: 1em 0;
+    font-size: .9rem;
+    line-height: 1.4em;
+    color: #989898;
+}
+/* shop */
+
+.shop{
+    width: 85%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #54624c;
+}
+.shop .image {
+    width: 90%;
+    margin: 1em auto;
+}
+.shop .image img{
+    width: 100%;
+}
+.shop h2{
+    width: 90%;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.shop p{
+    width: 90%;
+    padding-top: .5em;
+    line-height: 1.5em;
+    text-align: center;
+    color: white;
+
+}
+.shop a{
+    margin: 1em 0;
+    text-decoration: none;
+}
+.shop button{
+padding: .6em 2em;
+color: #54624c;
+background-color: #fff6df;
+border: none;
+box-sizing: border-box;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+hr{
+    width: 100%;
+}
+.box1{
+    width: 40%;
+    margin: 1em 0 1em 2em;
+}
+.box2{
+    width: 40%;
+    margin: 1em auto;
+}
+.box1 h2,.box2 h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.box1 h3,.box2 h3{
+    padding: .5em 0;
+    font-size: .8rem;
+}
+.box1 a,.box2 a{
+    text-decoration: none;
+    color: #6c1212;
+}
+.box3{
+    width: 100%;
+    margin: 1em auto;
+    text-align: center;
+}
+.box4{
+    width: 100%;
+    margin: 1em auto;
+    text-align: center;
+
+}
+.box3 h2,.box4 h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.box3 h3{
+    padding: .5em 0;
+    font-size: .8rem;
+}
+.box3 a{
+    text-decoration: none;
+    color: #6c1212;
+}
+.box4 a i{
+
+color:#6c1212 ;
+margin: .5em .5em;
+padding: .5em .6em;
+border-radius: 50%;
+border: .15em solid #6c1212;
+ }
+ .box5{
+    width: 100%;
+    margin: .5em auto;
+    text-align: center;
+}
+.box5 p{
+    color: #6c1212;
+    font-size: .8em;
+    font-weight: 400;
+}
+
+@media only screen and (max-width:320px) {
+    
+    .box5 p{
+        font-size: .7rem;
+    }
+}
+@media only screen and (min-width:800px) {
+    .logo img{
+        width: 70%;
+    }
+    .logo{
+        text-align: center;
+    }
+   
+    .shop{
+        width: 65%;
+    }
+    .box1,.box2,.box3,.box4{
+        width: 20%;
+    }
+    #two,#three{
+        display: none;
+    }
+    footer{
+        align-items: flex-start;
+    }
+    .about img{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width:1000px){
+    .logo img{
+        width: 40%;
+    }
+.about img{
+    width: 30%;
+}
+  
+    .shop{
+        width: 45%;
+    }
+}
+@media only screen and (min-width:1200px){
+    
+}
